@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact.h"
+#import "ContactGrouped.h"
 
 @interface ViewController : UIViewController
 
