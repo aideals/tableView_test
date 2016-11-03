@@ -101,7 +101,7 @@
     Contact *contact = nil;
     
     if (isSearching) {
-        return contact = searchArray[indexPath.row];
+         contact = searchArray[indexPath.row];
     } else{
     
     ContactGrouped *group = contacts[indexPath.section];
@@ -226,7 +226,7 @@
         return;
     }
     [self searchDataWithKeyWord:searchBar.text];
-    [searchBar resignFirstResponder];
+  
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
