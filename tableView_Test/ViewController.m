@@ -201,7 +201,9 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil];
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = @"号码";
+        ContactGrouped *group = contacts[selectedIndexPath.section];
+        Contact *contact = group.contacts[selectedIndexPath.row];
+        contact.phoneNumber =textField.text;
     }];
     
     [alert addAction:cancelAction];
@@ -226,7 +228,6 @@
         return;
     }
     [self searchDataWithKeyWord:searchBar.text];
-  
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
