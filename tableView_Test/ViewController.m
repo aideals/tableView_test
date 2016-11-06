@@ -204,7 +204,11 @@
         ContactGrouped *group = contacts[selectedIndexPath.section];
         Contact *contact = group.contacts[selectedIndexPath.row];
         contact.phoneNumber =textField.text;
-    }];
+    
+        UITableViewCell *cell = [[UITableViewCell alloc] init];
+        cell.detailTextLabel.text = textField.text;
+
+   }];
     
     [alert addAction:cancelAction];
     [alert addAction:okAction];
