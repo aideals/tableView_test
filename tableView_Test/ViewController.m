@@ -203,7 +203,7 @@
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         ContactGrouped *group = contacts[selectedIndexPath.section];
         Contact *contact = group.contacts[selectedIndexPath.row];
-        contact.phoneNumber =textField.text;
+        textField.text = contact.phoneNumber;
     
         UITableViewCell *cell = [[UITableViewCell alloc] init];
         cell.detailTextLabel.text = textField.text;
